@@ -960,7 +960,7 @@ packages:
 
   glob@7.2.3:
     resolution: {integrity: sha512-nFR0zLpU2YCaRxwoCJvL6UvCH2JFyFVIvwTLsIf21AuHlMskA1hhTdk+LlYJtOlYt9v6dvszD2BGRqBL+iQK9Q==}
-    deprecated: Glob versions prior to v9 are no longer supported
+    deprecated: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
 
   globals@13.24.0:
     resolution: {integrity: sha512-AhO5QUcj8llrbG09iWhPU2B204J1xnPeL8kQmVorSsy+Sjj1sk8gIyh6cUocGmH4L0UuhAJy+hJMRA4mgA4mFQ==}
@@ -980,8 +980,8 @@ packages:
     resolution: {integrity: sha512-EykJT/Q1KjTWctppgIAgfSO0tKVuZUjhgMr17kqTumMl6Afv3EISleU7qZUzoXDFTAHTDC4NOoG/ZxU3EvlMPQ==}
     engines: {node: '>=8'}
 
-  hono@4.10.1:
-    resolution: {integrity: sha512-rpGNOfacO4WEPClfkEt1yfl8cbu10uB1lNpiI33AKoiAHwOS8lV748JiLx4b5ozO/u4qLjIvfpFsPXdY5Qjkmg==}
+  hono@4.12.2:
+    resolution: {integrity: sha512-gJnaDHXKDayjt8ue0n8Gs0A007yKXj4Xzb8+cNjZeYsSzzwKc0Lr+OZgYwVfB0pHfUs17EPoLvrOsEaJ9mj+Tg==}
     engines: {node: '>=16.9.0'}
 
   human-signals@8.0.1:
@@ -1524,6 +1524,7 @@ packages:
   tar@7.5.1:
     resolution: {integrity: sha512-nlGpxf+hv0v7GkWBK2V9spgactGOp0qvfWRxUMjqHyzrt3SgwE48DIv/FhqPHJYLHpgW1opq3nERbz5Anq7n1g==}
     engines: {node: '>=18'}
+    deprecated: Old versions of tar are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
 
   text-hex@1.0.0:
     resolution: {integrity: sha512-uuVGNWzgJ4yhRaNSiubPY7OjISw4sw4E5Uv0wbjp+OzcbmVU/rsT8ujgcXJhn9ypzsgr5vlzpPqP+MBBKcGvbg==}
@@ -1796,13 +1797,13 @@ snapshots:
 
   '@eslint/js@8.57.1': {}
 
-  '@hono/node-server@1.19.5(hono@4.10.1)':
+  '@hono/node-server@1.19.5(hono@4.12.2)':
     dependencies:
-      hono: 4.10.1
+      hono: 4.12.2
 
-  '@hono/zod-validator@0.2.2(hono@4.10.1)(zod@3.25.76)':
+  '@hono/zod-validator@0.2.2(hono@4.12.2)(zod@3.25.76)':
     dependencies:
-      hono: 4.10.1
+      hono: 4.12.2
       zod: 3.25.76
 
   '@humanwhocodes/config-array@0.13.0':
@@ -1869,8 +1870,8 @@ snapshots:
   '@langchain/langgraph-api@1.0.0(@langchain/core@1.0.1(openai@6.5.0(zod@4.1.12)))(@langchain/langgraph-checkpoint@1.0.0(@langchain/core@1.0.1(openai@6.5.0(zod@4.1.12))))(@langchain/langgraph-sdk@1.0.0(@langchain/core@1.0.1(openai@6.5.0(zod@4.1.12))))(@langchain/langgraph@1.0.0(@langchain/core@1.0.1(openai@6.5.0(zod@4.1.12)))(zod@4.1.12))(openai@6.5.0(zod@4.1.12))(typescript@5.9.3)':
     dependencies:
       '@babel/code-frame': 7.27.1
-      '@hono/node-server': 1.19.5(hono@4.10.1)
-      '@hono/zod-validator': 0.2.2(hono@4.10.1)(zod@3.25.76)
+      '@hono/node-server': 1.19.5(hono@4.12.2)
+      '@hono/zod-validator': 0.2.2(hono@4.12.2)(zod@3.25.76)
       '@langchain/core': 1.0.1(openai@6.5.0(zod@4.1.12))
       '@langchain/langgraph': 1.0.0(@langchain/core@1.0.1(openai@6.5.0(zod@4.1.12)))(zod@4.1.12)
       '@langchain/langgraph-checkpoint': 1.0.0(@langchain/core@1.0.1(openai@6.5.0(zod@4.1.12)))
@@ -1880,7 +1881,7 @@ snapshots:
       dedent: 1.7.0
       dotenv: 16.6.1
       exit-hook: 4.0.0
-      hono: 4.10.1
+      hono: 4.12.2
       langsmith: 0.3.74(openai@6.5.0(zod@4.1.12))
       open: 10.2.0
       semver: 7.7.3
@@ -2621,7 +2622,7 @@ snapshots:
 
   has-flag@4.0.0: {}
 
-  hono@4.10.1: {}
+  hono@4.12.2: {}
 
   human-signals@8.0.1: {}
 
