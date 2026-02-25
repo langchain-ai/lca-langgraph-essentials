@@ -1099,8 +1099,8 @@ packages:
   kuler@2.0.0:
     resolution: {integrity: sha512-Xq9nH7KlWZmXAtodXDDRE7vs6DU1gTU8zYDHDiWLSip45Egwq3plLHzPn27NgvzL2r1LMPC1vdqh98sQxtqj4A==}
 
-  langsmith@0.3.74:
-    resolution: {integrity: sha512-ZuW3Qawz8w88XcuCRH91yTp6lsdGuwzRqZ5J0Hf5q/AjMz7DwcSv0MkE6V5W+8hFMI850QZN2Wlxwm3R9lHlZg==}
+  langsmith@0.3.87:
+    resolution: {integrity: sha512-XXR1+9INH8YX96FKWc5tie0QixWz6tOqAsAKfcJyPkE0xPep+NDz0IQLR32q4bn10QK3LqD2HN6T3n6z1YLW7Q==}
     peerDependencies:
       '@opentelemetry/api': '*'
       '@opentelemetry/exporter-trace-otlp-proto': '*'
@@ -1855,7 +1855,7 @@ snapshots:
       camelcase: 6.3.0
       decamelize: 1.2.0
       js-tiktoken: 1.0.21
-      langsmith: 0.3.74(openai@6.5.0(zod@4.1.12))
+      langsmith: 0.3.87(openai@6.5.0(zod@4.1.12))
       mustache: 4.2.0
       p-queue: 6.6.2
       p-retry: 4.6.2
@@ -1882,7 +1882,7 @@ snapshots:
       dotenv: 16.6.1
       exit-hook: 4.0.0
       hono: 4.12.2
-      langsmith: 0.3.74(openai@6.5.0(zod@4.1.12))
+      langsmith: 0.3.87(openai@6.5.0(zod@4.1.12))
       open: 10.2.0
       semver: 7.7.3
       stacktrace-parser: 0.1.11
@@ -1921,7 +1921,7 @@ snapshots:
       execa: 9.6.0
       exit-hook: 4.0.0
       extract-zip: 2.0.1
-      langsmith: 0.3.74(openai@6.5.0(zod@4.1.12))
+      langsmith: 0.3.87(openai@6.5.0(zod@4.1.12))
       open: 10.2.0
       package-manager-detector: 1.4.1
       stacktrace-parser: 0.1.11
@@ -2707,13 +2707,12 @@ snapshots:
 
   kuler@2.0.0: {}
 
-  langsmith@0.3.74(openai@6.5.0(zod@4.1.12)):
+  langsmith@0.3.87(openai@6.5.0(zod@4.1.12)):
     dependencies:
       '@types/uuid': 10.0.0
       chalk: 4.1.2
       console-table-printer: 2.14.6
       p-queue: 6.6.2
-      p-retry: 4.6.2
       semver: 7.7.3
       uuid: 10.0.0
     optionalDependencies:
