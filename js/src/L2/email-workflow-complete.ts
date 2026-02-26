@@ -9,12 +9,21 @@ import {
   interrupt,
 } from '@langchain/langgraph';
 import { ChatOpenAI } from '@langchain/openai';
+import { ChatGoogleGenerativeAI } from '@langchain/google-genai';
+
 import { generateId } from '../utils.js';
 import z from 'zod';
 
 const llm = new ChatOpenAI({
   model: 'gpt-5-nano',
 });
+
+// You can use Google Gemini as your llm
+
+// const llm = new ChatGoogleGenerativeAI({
+//   model: 'gemini-2.0-flash',
+//   apiKey: process.env.GEMINI_API_KEY,
+// });
 
 export const EmailClassificationSchema = z.object({
   intent: z.enum(['question', 'bug', 'billing', 'feature', 'complex']),
@@ -434,8 +443,10 @@ export const graph = new StateGraph(EmailStateDefinition)
   .addNode('classify_intent', classifyIntent)
   .addNode('search_documentation', searchDocumentation)
   .addNode('bug_tracking', bugTracking)
-  .addNode('write_response', writeResponse, {ends: ['human_review', 'send_reply'] })
-  .addNode('human_review', humanReview, {ends: ['send_reply', END] })
+  .addNode('write_response', writeResponse, {
+    ends: ['human_review', 'send_reply'],
+  })
+  .addNode('human_review', humanReview, { ends: ['send_reply', END] })
   .addNode('send_reply', sendReply)
   // Add edges
   .addEdge(START, 'read_email')
