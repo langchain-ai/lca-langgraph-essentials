@@ -60,8 +60,9 @@ jupyter lab
 Optional: Setup [LangSmith Studio](https://docs.langchain.com/oss/python/langchain/studio)
 
 ```bash
-# copy the .env file you created above to the studio directory
+# copy the .env file you created above to the studio directory, cd to 'studio' directory
 cp .env ./studio/.
+cd ./studio
 
 #to run
 langgraph dev
