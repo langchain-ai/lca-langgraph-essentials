@@ -2,6 +2,7 @@
 
 import { StateGraph, START, END } from '@langchain/langgraph';
 import { registry } from '@langchain/langgraph/zod';
+import { fileURLToPath } from 'url';
 import z from 'zod';
 
 const StateDefinition = z.object({
@@ -65,7 +66,7 @@ export const graph = new StateGraph(StateDefinition)
   // Finally, compile the graph
   .compile();
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (fileURLToPath(import.meta.url) === process.argv[1]) {
   console.log('\n=== L1: Parallel Execution Example ===\n');
 
   // Run the graph with initial state
