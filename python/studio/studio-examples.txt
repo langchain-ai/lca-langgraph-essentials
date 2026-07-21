@@ -1,0 +1,22 @@
+Information for the email-agent.py run within LangSmith Studio
+
+Samples Inputs:
+(EmailContent, SenderEmail, EmailID)
+
+My subscription is going to end in a few months, what is the new rate?
+customer@example.com
+email_456
+
+I was charged twice for my subscription! This is urgent!
+customer@example.com
+email_123
+
+Can answer with:
+JSON
+{"approved": true}
+
+If it doesn't like the user input:
+
+AttributeError: 'str' object has no attribute 'get'
+During task with name 'human_review' and id '293ebbbd-63c3-5ee4-f0a7-be941fc1ffbd'
+Make sure you choose JSON format for the Human Review input.
