@@ -1,0 +1,1 @@
+{"dependencies": ["."], "graphs": {"email-workflow": "./email-agent.py:builder"}, "env": ".env"}
