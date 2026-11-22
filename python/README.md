@@ -8,7 +8,7 @@ This course will cover an introduction to key LangGraph concepts: State, Nodes, 
 
 - Ensure you're using Python 3.11 - 3.13.
 - [uv](https://docs.astral.sh/uv/) package manager or [pip](https://pypi.org/project/pip/)
-- OpenAI API key
+- OpenAI API key or configured LangSmith Gateway access
 
 ### Installation
 
@@ -27,7 +27,9 @@ Make a copy of example.env
 cp example.env .env
 ```
 
-Insert API keys directly into .env file, OpenAI (required) and [LangSmith](#getting-started-with-langsmith) (optional)
+For default direct access, add the OpenAI key to `.env`. Alternatively, follow
+[Choose model access](../README.md#choose-model-access) to use LangSmith Gateway
+without local provider keys for supported chat models.
 
 ```env
 # Add OpenAI API key
@@ -35,7 +37,7 @@ OPENAI_API_KEY=your_openai_api_key_here
 
 # Optional API key for LangSmith tracing
 LANGSMITH_API_KEY=your_langsmith_api_key_here
-LANGSMITH_TRACING=true
+LANGSMITH_TRACING=false
 LANGSMITH_PROJECT=langgraph-py-essentials
 # If you are on the EU instance:
 LANGSMITH_ENDPOINT=https://eu.api.smith.langchain.com

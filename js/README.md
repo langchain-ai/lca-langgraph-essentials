@@ -6,9 +6,9 @@ This directory contains TypeScript implementations of the LangGraph examples fro
 
 ### Prerequisites
 
-- Node.js 20+
+- Node.js 22 LTS (minimum 20.16.0 for environment-file loading)
 - npm or yarn
-- OpenAI API key (for L2 email workflow)
+- OpenAI API key or configured LangSmith Gateway access (for L2 email workflow)
 
 ### Installation
 
@@ -27,7 +27,9 @@ Make a copy of example.env
 cp example.env .env
 ```
 
-Insert API keys directly into .env file, OpenAI (required) and [LangSmith](#getting-started-with-langsmith) (optional)
+For default direct access, add the OpenAI key to `.env`. Alternatively, follow
+[Choose model access](../README.md#choose-model-access) to use LangSmith Gateway
+without local provider keys for supported chat models.
 
 ```bash
 # Add OpenAI API key
@@ -35,8 +37,8 @@ OPENAI_API_KEY=your_openai_api_key_here
 
 # Optional API key for LangSmith tracing
 LANGSMITH_API_KEY=your_langsmith_api_key_here
-LANGSMITH_TRACING=true
-LANGSMITH_PROJECT=langgraph-py-essentials
+LANGSMITH_TRACING=false
+LANGSMITH_PROJECT=langgraph-js-essentials
 ```
 
 build project
