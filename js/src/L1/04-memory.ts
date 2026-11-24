@@ -8,6 +8,7 @@ import {
   MemorySaver,
 } from '@langchain/langgraph';
 import { registry } from '@langchain/langgraph/zod';
+import { fileURLToPath } from 'url';
 import z from 'zod';
 import { getUserInput } from '../utils.js';
 
@@ -62,7 +63,7 @@ export const graph = new StateGraph(StateDefinition)
   // Compile with checkpointer for persistence
   .compile({ checkpointer: memory });
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (fileURLToPath(import.meta.url) === process.argv[1]) {
   console.log('\n=== L1: Multi-Thread Memory Example ===\n');
 
   console.log(

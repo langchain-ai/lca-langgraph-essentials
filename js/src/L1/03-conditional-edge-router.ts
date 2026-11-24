@@ -2,6 +2,7 @@
 
 import { StateGraph, START, END } from '@langchain/langgraph';
 import { registry } from '@langchain/langgraph/zod';
+import { fileURLToPath } from 'url';
 import z from 'zod';
 import { getUserInput } from '../utils.js';
 
@@ -52,7 +53,7 @@ export const graphWithConditionalEdges = new StateGraph(StateDefinition)
   // Finally, compile the graph
   .compile();
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (fileURLToPath(import.meta.url) === process.argv[1]) {
   console.log('\n=== L1: Conditional Edge Router Example ===\n');
 
   console.log(

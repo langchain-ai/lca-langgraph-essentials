@@ -1,6 +1,7 @@
 // L1 Simple Node Example - Basic state/node functionality
 
 import { StateGraph, START, END } from '@langchain/langgraph';
+import { fileURLToPath } from 'url';
 import z from 'zod';
 
 const StateDefinition = z.object({
@@ -24,7 +25,7 @@ export const graph = new StateGraph(StateDefinition)
   .addEdge('a', END)
   .compile();
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (fileURLToPath(import.meta.url) === process.argv[1]) {
   console.log('\n=== L1: Simple Node Example ===\n');
 
   // Run the graph with initial state

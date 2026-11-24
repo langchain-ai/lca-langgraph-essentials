@@ -9,6 +9,7 @@ import {
   interrupt,
 } from '@langchain/langgraph';
 import { registry } from '@langchain/langgraph/zod';
+import { fileURLToPath } from 'url';
 import z from 'zod';
 
 import { getUserInput } from '../utils.js';
@@ -87,7 +88,7 @@ function hasInterrupt(result: any): result is { __interrupt__: any[] } {
 }
 
 // Example usage with interrupt handling
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (fileURLToPath(import.meta.url) === process.argv[1]) {
   console.log('\n=== L1: Interrupts Example ===\n');
 
   console.log(
